@@ -533,7 +533,6 @@ $(document).ready(function () {
 // window.onload = function () {
 
 // };
-
 var modal2 = document.getElementById("myModal");
 var span = document.getElementById("popImg");
 var landingPage = document.getElementById("main");
