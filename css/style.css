@@ -97,7 +97,7 @@ header { padding: 20px 80px; position: absolute; display: inline-block; top: 0; 
 header .navbar { padding: 0; }
 header .navbar-brand img { 
   height: 86px;
-  width:92px
+  
  }
 
 header .navbar-light .nav-item { margin: 0 10px; }

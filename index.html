@@ -37,27 +37,29 @@
 
     <style>
       /* Modal CSS */
-      .modal {
-        display: block; /* Hidden by default */
+      .custm_modal {
+        display: flex; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
         overflow: auto; /* Enable scroll if needed */
         background-image: url(/images/all-img/bg.gif);
         background-size: cover;
         background-position: center;
       }
 
-      .modal-content {
+      /* .popup_cont {
         background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
+        margin: 15% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-      }
+        width: 80%; /* Could be more or less, depending on screen size 
+      } */
 
       .close {
         color: #aaa;
@@ -81,7 +83,7 @@
       /* video style */
       .video-container {
         position: relative;
-        width: 100%;
+        width: 100vw;
         overflow: hidden;
       }
       .pop_img {
@@ -138,7 +140,7 @@
           <source src="/images/all-img/modal.mp4" type="video/mp4" />
         </video> -->
     <!-- Modal content -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="custm_modal">
       <div class="video-container"></div>
       <div
         class="popup_cont"
@@ -162,7 +164,7 @@
             <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="javascript:void(0)">
-                  <img src="images/all-img/logo.png" class="img-fluid" alt="" />
+                  <img src="images/all-img/IMG_6403.PNG" class="img-fluid" alt="" />
                 </a>
                 <button
                   class="navbar-toggler"
@@ -205,7 +207,6 @@
                       <!-- <a class="nav-link" href="#contact">Contact Us</a> -->
                       <a
                         class="nav-link button"
-                        data-bs-toggle="modal"
                         data-bs-target=".iq-login"
                         data-whatever="@mdo"
                         href="https://Buy Now.Optimus.vip/"
@@ -216,7 +217,6 @@
                     <li class="nav-item iq-mlr-0 lg_ds_none">
                       <a
                         class="nav-link button"
-                        data-bs-toggle="modal"
                         data-bs-target=".iq-login"
                         data-whatever="@mdo"
                         href="chartlink"
@@ -232,7 +232,6 @@
                   <li class="nav-item iq-mlr-0">
                     <a
                       class="nav-link button"
-                      data-bs-toggle="modal"
                       data-bs-target=".iq-login"
                       data-whatever="@mdo"
                       href="chartlink"
@@ -498,7 +497,7 @@
                 data-wow-delay="0.3s"
               >
                 <img
-                  src="images/all-img/logo.png"
+                  src="images/all-img/IMG_6369.PNG"
                   class="img_ban"
                   alt=""
                   style="border-radius: 8px; width: 400px"
@@ -1375,88 +1374,6 @@
       </section>
       <!-- Token Sale Proceeds END -->
 
-      <div
-        class="modal fade iq-login"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content blue-bg">
-            <div class="modal-header text-center">
-              <h4 class="modal-title">Login</h4>
-              <button
-                type="button"
-                class="btn-close bg-white"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="contact-form">
-                <div class="section-field">
-                  <input
-                    class="require"
-                    id="contact_name"
-                    type="text"
-                    placeholder="Name*"
-                    name="name"
-                  />
-                </div>
-                <div class="section-field">
-                  <input
-                    class="require"
-                    id="contact_email"
-                    type="email"
-                    placeholder="Email*"
-                    name="email"
-                  />
-                </div>
-                <a class="button iq-mtb-10" href="javascript:void(0)"
-                  >Sign In</a
-                >
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                        />Remember Me</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-sm-6 text-end">
-                    <a href="javascript:void(0)">Forgot Password</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer text-center">
-              <div>
-                Don't Have an Account?
-                <a href="javascript:void(0)" class="iq-font-yellow"
-                  >Register Now</a
-                >
-              </div>
-              <ul class="iq-media-blog iq-mt-20">
-                <li>
-                  <a href="# "><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="# "><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="# "><i class="fa fa-google"></i></a>
-                </li>
-                <li>
-                  <a href="# "><i class="fa fa-github"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- back-to-top -->
       <div id="back-to-top">
         <a class="top" id="top" href="#top"
@@ -1498,21 +1415,6 @@
     <!-- Custom JavaScript -->
     <script src="js/custom.js"></script>
 
-    <script>
-      window.onload = function () {
-        var modal2 = document.getElementById("myModal");
-        var span = document.getElementById("popImg");
-        var landingPage = document.getElementById("main");
-
-        // When the page loads, open the modal
-        modal2.style.display = "block";
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-          modal2.style.display = "none";
-          landingPage.style.display = "block";
-        };
-      };
-    </script>
+    <script></script>
   </body>
 </html>
