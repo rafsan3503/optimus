@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Optimus</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="css/typography.css" />
+    <!-- media element player -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/mediaelementplayer.min.css"
+    />
+    <!-- style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+    <style>
+      /* Modal CSS */
+      .modal {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-image: url(/images/all-img/bg.gif);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Landing Page CSS */
+      #main {
+        display: none; /* Hidden by default */
+      }
+
+      /* video style */
+      .video-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .pop_img {
+        width: 500px;
+        cursor: pointer;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "TESLA", sans-serif !important;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+
+      @font-face {
+        font-family: "TESLA"; /* Choose a unique name for your font */
+        src: url("/fonts/TESLA.ttf") format("woff2"),
+          /* Modern Browsers */ url("/fonts/TESLA.ttf") format("woff");
+
+        /* Older Browsers */ /* You can add more file formats here if needed (e.g., .ttf, .eot) */
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-offset="80">
+    <!-- loading -->
+    <!-- <div id="loading">
+      <div id="loading-center">
+        <div class="loader loader2">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- loading End -->
+
+    <!-- pop-up section -->
+    <!-- Modal -->
+    <!-- <video controls autoplay loop class="position:relative">
+          <source src="/images/all-img/modal.mp4" type="video/mp4" />
+        </video> -->
+    <!-- Modal content -->
+    <div id="myModal" class="modal">
+      <div class="video-container"></div>
+      <div
+        class="popup_cont"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <div>
+          <img
+            src="/images/all-img/mod.png"
+            class="pop_img"
+            alt=""
+            id="popImg"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <main id="main">
+      <header>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="javascript:void(0)">
+                  <img src="images/all-img/logo.png" class="img-fluid" alt="" />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="la la-bars"></i>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tokenomics">Tokenomics</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#roadmap">RoadMap</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                  </li> -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <!-- <a class="nav-link" href="#contact">Contact Us</a> -->
+                      <a
+                        class="nav-link button"
+                        data-bs-toggle="modal"
+                        data-bs-target=".iq-login"
+                        data-whatever="@mdo"
+                        href="https://Buy Now.Optimus.vip/"
+                        target="_blank"
+                        >Buy Now</a
+                      >
+                    </li>
+                    <li class="nav-item iq-mlr-0 lg_ds_none">
+                      <a
+                        class="nav-link button"
+                        data-bs-toggle="modal"
+                        data-bs-target=".iq-login"
+                        data-whatever="@mdo"
+                        href="chartlink"
+                        >Chart</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <ul class="nav justify-content-end">
+                  <!-- <li class="nav-item iq-mlr-0">
+                  
+                </li> -->
+                  <li class="nav-item iq-mlr-0">
+                    <a
+                      class="nav-link button"
+                      data-bs-toggle="modal"
+                      data-bs-target=".iq-login"
+                      data-whatever="@mdo"
+                      href="chartlink"
+                      >Chart</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Header END -->
+      <!-- banner -->
+      <div id="wave" class="iq-banner">
+        <div class="banner-info">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-lg-7 align-self-center wow fadeInLeft"
+                data-wow-delay="0.2s"
+              >
+                <div class="banner-text text-left text-white">
+                  <h1 class="text-white iq-mb-20">
+                    Precision in Every Circuit, Excellence in Every Byte: Your
+                    Future, Engineered by
+                    <b class="iq-font-yellow">Optimus</b>
+                  </h1>
+                  <p>
+                    Step into the realm of Optimus, where the boundless
+                    potential of artificial intelligence converges with the
+                    robust security of blockchain technology!"
+                  </p>
+                  <!-- <a href="chartlink" class="button-play video-popup"> Chart </a> -->
+
+                  <a
+                    href="buylink"
+                    target="_blank"
+                    class="button bt-white iq-mt-5 iq-ml-10"
+                    >Buy Now</a
+                  >
+                </div>
+              </div>
+              <div
+                class="col-lg-5 text-center r9-mt-40 wow fadeInRight"
+                data-wow-delay="0.6s"
+              >
+                <!-- <div class="iq-countdown">
+                <h2 class="iq-tw-8 iq-font-yellow">ICO Ends In:</h2>
+                <ul id="countdown">
+                  <li class="border-white">
+                    <span class="days">00</span>
+                    <p class="days_text">Days</p>
+                  </li>
+                  <li class="border-white">
+                    <span class="hours">00</span>
+                    <p class="hours_text">Hours</p>
+                  </li>
+                  <li class="border-white">
+                    <span class="minutes">00</span>
+                    <p class="minutes_text">Minutes</p>
+                  </li>
+                  <li class="border-white">
+                    <span class="seconds">00</span>
+                    <p class="seconds_text">Seconds</p>
+                  </li>
+                </ul>
+                <div class="iq-progress-bar-linear">
+                  <p class="iq-progress-bar-text text-left">
+                    Sale Raised
+                    <span>50000 ICOX</span>
+                  </p>
+                  <div class="iq-progress-bar">
+                    <span data-percent="90"></span>
+                  </div>
+                </div>
+                <a
+                  class="button iq-mb-20 bt-white"
+                  href="javascript:void(0)"
+                  role="button"
+                  >Sign Up & Buy Token Now</a
+                >
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="javascript:void(0)"
+                      ><i class="fa fa-cc-visa"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="javascript:void(0)"
+                      ><i class="fa fa-paypal"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="javascript:void(0)"
+                      ><i class="fa fa-bitcoin"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="javascript:void(0)"
+                      ><i class="fa fa-credit-card-alt"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div> -->
+
+                <img
+                  src="/images/all-img/mod.png"
+                  alt=""
+                  style="width: 500px"
+                  class="ban_img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- banner -->
+      <!-- Main-Contain -->
+      <div class="main-contain">
+        <!-- Clients -->
+        <div class="iq-our-clients iq-ptb-60 light-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <div
+                  class="owl-carousel"
+                  data-autoplay="true"
+                  data-loop="true"
+                  data-nav="false"
+                  data-dots="false"
+                  data-items="7"
+                  data-items-laptop="6"
+                  data-items-tab="5"
+                  data-items-mobile="2"
+                  data-items-mobile-sm="1"
+                  data-margin="30"
+                >
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/dextools.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/uniswap.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/etherscan.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/meta.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/dextools.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/etherscan.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/ethereum.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/meta.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/dextools.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/etherscan.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/dextools.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <div class="item">
+                    <a href="#"
+                      ><img
+                        class="img-fluid center-block part_img"
+                        src="images/partners/meta.png"
+                        alt="#"
+                    /></a>
+                  </div>
+                  <!-- <div class="item">
+                  <a href="#"
+                    ><img
+                      class="img-fluid center-block"
+                      src="images/clients/white/05.png"
+                      alt="#"
+                  /></a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      class="img-fluid center-block"
+                      src="images/clients/white/06.png"
+                      alt="#"
+                  /></a>
+                </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Clients -->
+        <!-- What is Ico -->
+        <section id="ico" class="overview-block-pt about_bg">
+          <div class="container">
+            <div class="row flex-row-reverse">
+              <div
+                class="col-lg-6 align-self-center wow fadeInLeft"
+                data-wow-delay="0.3s"
+              >
+                <img
+                  src="images/all-img/logo.png"
+                  class="img_ban"
+                  alt=""
+                  style="border-radius: 8px; width: 400px"
+                />
+              </div>
+              <div
+                class="col-lg-6 align-self-center mt-5 mt-lg-0 wow fadeInRight"
+                data-wow-delay="0.7s"
+              >
+                <div class="heading-title left">
+                  <small class="iq-font-green">Who We Are</small>
+                  <h2 class="iq-tw-6">About Optimus</h2>
+                </div>
+                <p>
+                  Elon Musk’s primary goal for Optimus is to free humans from
+                  ‘boring, dangerous and repetitive work’
+                </p>
+                <p>
+                  Optimus is Elon Musk’s very own and brand new invention, that
+                  is able to walk and perform set tasks without external input,
+                  using sensors and built-in cameras to recognise its limbs and
+                  move its hands in a human-like manner.
+                </p>
+                <a class="button iq-mt-20" href="buylink" role="button"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- What is Ico END -->
+        <!-- Our Mission -->
+
+        <!-- Tranding Platform END -->
+        <!-- Product Description -->
+        <section id="product" class="iq-product-description overview-block-pt">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="heading-title">
+                  <!-- <small class="iq-font-green"> </small> -->
+                  <h2 class="title iq-tw-6">Optimus</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row iq-mt-100">
+              <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="iq-fancy-box text-sm-center">
+                  <div class="fancy-icon">
+                    <img
+                      class="img-fluid"
+                      src="images/all-img/twit1.png"
+                      alt=""
+                    />
+                  </div>
+                  <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">
+                      Multiple fully Tesla-made Bots now walking around &amp;
+                      learning about the real world 🤖 <br /><br />Join the
+                      Tesla AI team →
+                      <a href="https://t.co/dBhQqg1qya"
+                        >https://t.co/dBhQqg1qya</a
+                      >
+                      <a href="https://t.co/3TZ2znxkfd"
+                        >pic.twitter.com/3TZ2znxkfd</a
+                      >
+                    </p>
+                    &mdash; Tesla Optimus (@Tesla_Optimus)
+                    <a
+                      href="https://twitter.com/Tesla_Optimus/status/1658576897490530305?ref_src=twsrc%5Etfw"
+                      >May 16, 2023</a
+                    >
+                  </blockquote>
+                  <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8"
+                  ></script>
+                </div>
+              </div>
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="iq-fancy-box text-sm-center">
+                  <div class="fancy-icon">
+                    <img
+                      class="img-fluid"
+                      src="images/all-img/twit2.png"
+                      alt=""
+                    />
+                  </div>
+                  <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">
+                      Optimus can now sort objects autonomously 🤖
+                      <br /><br />Its neural network is trained fully
+                      end-to-end: video in, controls out.<br /><br />Come join
+                      to help develop Optimus (&amp; improve its yoga routine
+                      🧘) <br /><br />→
+                      <a href="https://t.co/dBhQqg1qya"
+                        >https://t.co/dBhQqg1qya</a
+                      >
+                      <a href="https://t.co/1Lrh0dru2r"
+                        >pic.twitter.com/1Lrh0dru2r</a
+                      >
+                    </p>
+                    &mdash; Tesla Optimus (@Tesla_Optimus)
+                    <a
+                      href="https://twitter.com/Tesla_Optimus/status/1705728820693668189?ref_src=twsrc%5Etfw"
+                      >September 23, 2023</a
+                    >
+                  </blockquote>
+                  <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8"
+                  ></script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Product Description END -->
+
+        <!-- optimus going global start-->
+        <section id="ico" class="overview-block-pt opt_global">
+          <div class="container">
+            <div class="row flex-row-reverse">
+              <div
+                class="col-lg-6 align-self-center mt-5 mt-lg-0 wow fadeInRight"
+                data-wow-delay="0.7s"
+              >
+                <div class="heading-title left">
+                  <!-- <small class="iq-font-green">Who We Are</small> -->
+                  <h2 class="iq-tw-6">Optimus going global</h2>
+                </div>
+                <p>
+                  Elon Musk has envisioned a bright future for Optimus. At a
+                  Tesla 2023 shareholders meeting, Elon stated that “Optimus has
+                  the potential to be more significant than Tesla’s vehicle
+                  business over time” with hints production units to be in the
+                  millions.
+                </p>
+                <p>
+                  Optimus is Elon Musk’s very own and brand new invention, that
+                  is able to walk and perform set tasks without external input,
+                  using sensors and built-in cameras to recognise its limbs and
+                  move its hands in a human-like manner.
+                </p>
+                <a class="button iq-mt-20" href="chartlink" role="button"
+                  >Chart</a
+                >
+              </div>
+              <div
+                class="col-lg-6 align-self-center wow fadeInLeft"
+                data-wow-delay="0.3s"
+              >
+                <blockquote class="twitter-tweet" style="height: 300px">
+                  <p lang="en" dir="ltr">
+                    *MUSK SAYS TESLA&#39;S HUMANOID OPTIMUS ROBOT WILL BE WORTH
+                    MORE THAN THE CAR BUSINESS - CNBC<a
+                      href="https://twitter.com/search?q=%24TSLA&amp;src=ctag&amp;ref_src=twsrc%5Etfw"
+                      >$TSLA</a
+                    >
+                    <a href="https://t.co/wzfQclkbZM"
+                      >pic.twitter.com/wzfQclkbZM</a
+                    >
+                  </p>
+                  &mdash; Investing.com (@Investingcom)
+                  <a
+                    href="https://twitter.com/Investingcom/status/1520789688369430529?ref_src=twsrc%5Etfw"
+                    >May 1, 2022</a
+                  >
+                </blockquote>
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></script>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="road" class="iq-timeline iq-bg-over overview-block-ptb">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="heading-title">
+                  <small class="iq-font-green">PROCESS</small>
+                  <h2 class="title iq-tw-6">Roadmap of Optimus</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="timeline">
+                  <div class="timeline__wrap">
+                    <div class="timeline__items">
+                      <div class="timeline__item">
+                        <div class="timeline__content">
+                          <h2>Foundation and Token Launch</h2>
+                          <p>
+                            Development of the Optimus AI platform.
+                            <br />
+                            Initial token design and development, including
+                            smart contract creation.
+                            <br />
+                            Presale of Optimus tokens, targeting early adopters
+                            and strategic partners.
+                            <br />
+                            Official launch of the Optimus token, listing on
+                            major exchanges.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline__item">
+                        <div class="timeline__content">
+                          <h2>Platform Development and Expansion</h2>
+                          <p>
+                            Implementation of AI-driven solutions and
+                            integration with Optimus token.
+                            <br />
+                            Expansion of the AI marketplace, enabling
+                            transactions with Optimus tokens.
+                            <br />
+                            Introduction of community governance features,
+                            allowing token holders to vote on key decisions.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline__item">
+                        <div class="timeline__content">
+                          <h2>Community Growth and Ecosystem Building</h2>
+                          <p>
+                            Initiatives to incentivize community engagement and
+                            content creation.
+                            <br />
+                            Partnerships with AI developers and start-ups for
+                            ecosystem expansion.
+                            <br />
+                            Implementation of staking mechanisms and financial
+                            incentives for token holders.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline__item">
+                        <div class="timeline__content">
+                          <h2>Innovation and Global Reach</h2>
+                          <p>
+                            Launch of global marketing campaigns to increase
+                            platform adoption.
+                            <br />
+                            Enhancement of AI capabilities based on community
+                            feedback and technological advancements.
+                            <br />
+                            Expansion of the platform's global footprint,
+                            targeting key markets outside the initial launch
+                            regions.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline__item">
+                        <div class="timeline__content">
+                          <h2>Sustainability and Long-Term Vision</h2>
+                          <p>
+                            Focus on sustainable growth, continuous innovation,
+                            and adaptation to new AI trends and market needs.
+                            <br />
+                            Regular updates and improvements to the platform,
+                            guided by community feedback and technological
+                            advancements.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- <div class="timeline__item">
+                      <div class="timeline__content">
+                        <h2>2007</h2>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer dignissim neque condimentum lacus
+                          dapibus.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline__item">
+                      <div class="timeline__content">
+                        <h2>2004</h2>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer dignissim neque condimentum lacus
+                          dapibus.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="timeline__item">
+                      <div class="timeline__content">
+                        <h2>2002</h2>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer dignissim neque condimentum lacus
+                          dapibus.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Integer dignissim neque condimentum lacus
+                          dapibus.
+                        </p>
+                      </div>
+                    </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- optimus going global end-->
+        <!-- tokenmics section -->
+        <!-- ===============>> tokenomics section start here <<================= -->
+        <section class="tokenomics_sec" id="tokenomics">
+          <div class="container">
+            <div class="section-header section-header--max50">
+              <h2 class="mb-15 mt-minus-5" style="margin-bottom: 50px">
+                <span>Tokenomics</span> Of Optimus
+              </h2>
+            </div>
+            <div class="row">
+              <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <h3 class="token_info">Token Info :</h3>
+                <div class="chart-content-inner">
+                  <h6>Token Name - Optimus</h6>
+
+                  <br />
+
+                  <!-- <h6>Ticker - $MLTX</h6> -->
+
+                  <br />
+
+                  <h6>Max bag at start will be - 3% (30k tokens)</h6>
+                  <br />
+                  <h6>Initial LP - 1 ETH</h6>
+
+                  <br />
+
+                  <h6>Total Supply - 1 Million</h6>
+                  <br />
+
+                  <h6>buy /Sell Tax - 5%</h6>
+                  <br />
+
+                  <h6>Contract:</h6>
+
+                  <div class="copy-container">
+                    <h6 id="contract" style="word-break: break-all">
+                      0x000000000000000000000000000000000
+                    </h6>
+
+                    <br />
+                  </div>
+
+                  <br />
+                </div>
+              </div>
+              <div class="col-md-6 wow fadeInRight" data-wow-delay="0.7s">
+                <div class="img_box">
+                  <img src="/images/all-img/abt.png" alt="" class="tk_img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ===============>> tokenomics section end here <<================= -->
+        <!-- Token Sale Timeline -->
+
+        <!-- Token Sale Timeline -->
+        <!-- Team -->
+        <!-- <section id="team" class="iq-team overview-block-pb team_member">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="heading-title">
+                  <small class="iq-font-green">Meet Our Team</small>
+                  <h2 class="title iq-tw-6">Team Members</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-lg-3 col-md-6 wow fadeInLeft"
+                data-wow-delay="0.3s"
+              >
+                <div class="our-team">
+                  <div class="teame-2-blog">
+                    <div class="team-image">
+                      <img alt="#" src="images/team/01.jpg" class="img-fluid" />
+                      <ul class="social">
+                        <li>
+                          <a
+                            href="javascript:void(0)"
+                            class="fa fa-facebook"
+                          ></a>
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:void(0)"
+                            class="fa fa-linkedin"
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="team-content">
+                      <h5 class="title iq-tw-7">Nik Jorden</h5>
+                      <small class="iq-mt-5 d-block iq-mb-10 iq-font-yellow"
+                        >CEO & Lead
+                      </small>
+                      <p class="description">
+                        when an unknownshil printer took a galley of type and
+                        scrambled it to make a type specimen book.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 r4-mt-40 wow fadeInUp"
+                data-wow-delay="0.7s"
+              >
+                <div class="our-team">
+                  <div class="team-image">
+                    <img alt="#" src="images/team/02.jpg" class="img-fluid" />
+                    <ul class="social">
+                      <li>
+                        <a href="javascript:void(0)" class="fa fa-facebook"></a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="fa fa-linkedin"></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="team-content">
+                    <h5 class="title iq-tw-7">JD Scot</h5>
+                    <small class="iq-mt-5 d-block iq-mb-10 iq-font-yellow"
+                      >CEO & Lead
+                    </small>
+                    <p class="description">
+                      when an unknownshil printer took a galley of type and
+                      scrambled it to make a type specimen book.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 r4-mt-40 wow fadeInRight"
+                data-wow-delay="0.12s"
+              >
+                <div class="our-team">
+                  <div class="team-image">
+                    <img alt="#" src="images/team/03.jpg" class="img-fluid" />
+                    <ul class="social">
+                      <li>
+                        <a href="javascript:void(0)" class="fa fa-facebook"></a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="fa fa-linkedin"></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="team-content">
+                    <h5 class="title iq-tw-7">Haris Morgan</h5>
+                    <small class="iq-mt-5 d-block iq-mb-10 iq-font-yellow"
+                      >CEO & Lead
+                    </small>
+                    <p class="description">
+                      when an unknownshil printer took a galley of type and
+                      scrambled it to make a type specimen book.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 r4-mt-40">
+                <div class="our-team">
+                  <div class="team-image">
+                    <img alt="#" src="images/team/04.jpg" class="img-fluid" />
+                    <ul class="social">
+                      <li>
+                        <a href="javascript:void(0)" class="fa fa-facebook"></a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="fa fa-linkedin"></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="team-content">
+                    <h5 class="title iq-tw-7">Kips Leo</h5>
+                    <small class="iq-mt-5 d-block iq-mb-10 iq-font-yellow"
+                      >CEO & Lead
+                    </small>
+                    <p class="description">
+                      when an unknownshil printer took a galley of type and
+                      scrambled it to make a type specimen book.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- Team END -->
+        <!-- PARTNERS -->
+        <!-- <section class="iq-partners overview-block-pb">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="heading-title">
+                <small class="iq-font-green">Executive Partners</small>
+                <h2 class="title iq-tw-6">Partners & Supporters</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text ever sincehar the 1500s, when
+                  an unknownshil printer took a galley of type and scrambled it
+                  to make a type specimen book. It has survived not only five
+                  centuries.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/01.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/02.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/03.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/04.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/05.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/06.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/06.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/05.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/04.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/05.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/06.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="Signal-partners">
+                <img
+                  class="img-fluid center-block"
+                  src="images/clients/white/01.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+        <!-- PARTNERS END -->
+        <!-- FAQ -->
+        <!-- <section id="faq" class="iq-anything overview-block-pb">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="heading-title">
+                  <small class="iq-font-green">Ask Anything</small>
+                  <h2 class="title iq-tw-6">Frequently Asked Questions</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-lg-6 align-self-center mt-5 mt-lg-0 wow fadeInLeft"
+                data-wow-delay="0.3s"
+              >
+                <img src="/images/all-img/tkn.png" alt="" class="tk_img" />
+              </div>
+              <div
+                class="col-lg-6 r9-mt-40 wow fadeInRight"
+                data-wow-delay="0.7s"
+              >
+                <div class="iq-accordion">
+                  <div class="iq-ad-block ad-active">
+                    <a href="javascript:void(0)" class="ad-title iq-tw-6"
+                      >What is Optimus?</a
+                    >
+                    <div class="ad-details">
+                      Optimus Token is a utility token that offers exclusive
+                      benefits within the cryptocurrency ecosystem, including
+                      access to various services and opportunities.
+                    </div>
+                  </div>
+                  <div class="iq-ad-block">
+                    <a href="javascript:void(0)" class="ad-title iq-tw-6"
+                      >How can I acquire Optimus Tokens?</a
+                    >
+                    <div class="ad-details">
+                      You can obtain Optimus Tokens by purchasing them on
+                      supported cryptocurrency exchanges or by participating in
+                      token sales and promotions.
+                    </div>
+                  </div>
+                  <div class="iq-ad-block">
+                    <a href="javascript:void(0)" class="ad-title iq-tw-6"
+                      >What can I do with Optimus Tokens?</a
+                    >
+                    <div class="ad-details">
+                      Optimus Tokens grant you access to exclusive services,
+                      such as reduced trading fees, early access to projects,
+                      and other opportunities within the crypto space.
+                    </div>
+                  </div>
+                  <div class="iq-ad-block">
+                    <a href="javascript:void(0)" class="ad-title iq-tw-6"
+                      >Is Optimus Token secure?</a
+                    >
+                    <div class="ad-details">
+                      Yes, the token employs advanced security measures to
+                      protect users and their assets, and its transactions are
+                      transparent and immutable on the blockchain.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- FAQ END -->
+      </div>
+      <!-- Token Sale Proceeds -->
+      <section id="contact-us" class="contact-us overview-block-pt">
+        <div class="wrapper">
+          <div class="row justify-content-center">
+            <div
+              class="col-lg-12 text-center wow fadeInUp"
+              data-wow-delay="0.4s"
+            >
+              <form id="contact" method="post">
+                <div class="heading-title left">
+                  <small class="iq-font-green">Contact With Us</small>
+                  <h2 class="title iq-tw-6">Contact Optimus</h2>
+                </div>
+
+                <div class="contact-form">
+                  <div class="section-field">
+                    <input
+                      class="require"
+                      id="contact_name"
+                      type="text"
+                      placeholder="Name*"
+                      name="name"
+                    />
+                  </div>
+                  <div class="section-field">
+                    <input
+                      class="require"
+                      id="contact_email"
+                      type="email"
+                      placeholder="Email*"
+                      name="email"
+                    />
+                  </div>
+                  <div class="section-field">
+                    <input
+                      class="require"
+                      id="contact_phone"
+                      type="text"
+                      placeholder="Phone*"
+                      name="phone"
+                    />
+                  </div>
+                  <div class="section-field textarea">
+                    <textarea
+                      id="contact_message"
+                      class="input-message require"
+                      placeholder="Comment*"
+                      rows="5"
+                      name="message"
+                    ></textarea>
+                  </div>
+                  <div class="section-field iq-mt-20">
+                    <div
+                      class="g-recaptcha"
+                      data-sitekey="6Lc5XV4UAAAAAJzUmGomye9Peru8lXyzT22FH0lX"
+                    ></div>
+                  </div>
+                  <div class="d-block text-center">
+                    <button
+                      id="submit"
+                      name="submit"
+                      type="submit"
+                      value="Send"
+                      class="button iq-mt-15"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                  <div
+                    class="alert alert-success alert-dismissible fade show"
+                    role="alert"
+                    id="success"
+                  >
+                    <strong>Thank You, Your message has been received.</strong>.
+                    <button
+                      type="button"
+                      class="close"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- <div class="col-lg-6 iq-pl-50">
+            <div class="heading-title left iq-mt-30">
+              <small class="iq-font-green">JUST ONE CALLs</small>
+              <h2 class="title iq-tw-6">Address</h2>
+            </div>
+            <p>
+              It has survived not only five centuries, but also the leap into
+              electronic typesetting. It has survived not only five centuries.
+            </p>
+            <div class="iq-contact-box-01 iq-mt-40">
+              <div class="iq-icon yellow-bg">
+                <i aria-hidden="true" class="la la-map-marker"></i>
+              </div>
+              <div class="contact-content">
+                <h5 class="iq-tw-7">Address</h5>
+                <span class="lead"
+                  >1234 North Luke Lane,<br />South Bend,IN 360001</span
+                >
+              </div>
+            </div>
+            <div class="iq-contact-box-01 iq-mt-40">
+              <div class="iq-icon yellow-bg">
+                <i aria-hidden="true" class="la la-phone-square"></i>
+              </div>
+              <div class="contact-content">
+                <h5 class="iq-tw-6">Phone</h5>
+                <span class="lead iq-tw-6">+0123 456 789</span>
+                <p class="iq-mb-0">Mon-Fri 8:00am - 8:00pm</p>
+              </div>
+            </div>
+            <div class="iq-contact-box-01 iq-mt-40">
+              <div class="iq-icon yellow-bg">
+                <i aria-hidden="true" class="la la-envelope-o"></i>
+              </div>
+              <div class="contact-content">
+                <h5 class="iq-tw-6">Mail</h5>
+                <span class="lead iq-tw-6">support@.com</span>
+                <p class="iq-mb-0">24 X 7 online support</p>
+              </div>
+            </div>
+            <ul class="info-share">
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-google"></i></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-github"></i></a>
+              </li>
+            </ul>
+          </div> -->
+          </div>
+        </div>
+        <div
+          class="copyright-box text-center iq-bg-over iq-over-black-20 text-center iq-ptb-20 iq-mt-100"
+        >
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="iq-copyright text-white">
+                  © Copyright 2023 Optimus
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Token Sale Proceeds END -->
+
+      <div
+        class="modal fade iq-login"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content blue-bg">
+            <div class="modal-header text-center">
+              <h4 class="modal-title">Login</h4>
+              <button
+                type="button"
+                class="btn-close bg-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="contact-form">
+                <div class="section-field">
+                  <input
+                    class="require"
+                    id="contact_name"
+                    type="text"
+                    placeholder="Name*"
+                    name="name"
+                  />
+                </div>
+                <div class="section-field">
+                  <input
+                    class="require"
+                    id="contact_email"
+                    type="email"
+                    placeholder="Email*"
+                    name="email"
+                  />
+                </div>
+                <a class="button iq-mtb-10" href="javascript:void(0)"
+                  >Sign In</a
+                >
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                        />Remember Me</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm-6 text-end">
+                    <a href="javascript:void(0)">Forgot Password</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer text-center">
+              <div>
+                Don't Have an Account?
+                <a href="javascript:void(0)" class="iq-font-yellow"
+                  >Register Now</a
+                >
+              </div>
+              <ul class="iq-media-blog iq-mt-20">
+                <li>
+                  <a href="# "><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="# "><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="# "><i class="fa fa-google"></i></a>
+                </li>
+                <li>
+                  <a href="# "><i class="fa fa-github"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- back-to-top -->
+      <div id="back-to-top">
+        <a class="top" id="top" href="#top"
+          ><i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </a>
+      </div>
+      <!-- back-to-top End -->
+      <!-- bubbly -->
+      <canvas id="canvas1"></canvas>
+      <!-- bubbly End -->
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- popper JavaScript -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All-plugins JavaScript -->
+    <script src="js/all-plugins.js"></script>
+    <!-- timeline JavaScript -->
+    <script src="js/timeline.min.js"></script>
+    <!-- wave JavaScript -->
+    <script src="js/wave/three.min.js"></script>
+    <script src="js/wave/Projector.js"></script>
+    <script src="js/wave/CanvasRenderer.js"></script>
+    <script src="js/wave/index.js"></script>
+    <!-- bubbly JavaScript -->
+    <script src="js/bubbly-bg.js"></script>
+    <!-- amcharts -->
+    <script src="js/amcharts/amcharts.js"></script>
+    <script src="js/amcharts/serial.js"></script>
+    <script src="js/amcharts/export.min.js"></script>
+    <script src="js/amcharts/none.js"></script>
+    <!-- carousel JavaScript -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+
+    <script>
+      window.onload = function () {
+        var modal2 = document.getElementById("myModal");
+        var span = document.getElementById("popImg");
+        var landingPage = document.getElementById("main");
+
+        // When the page loads, open the modal
+        modal2.style.display = "block";
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal2.style.display = "none";
+          landingPage.style.display = "block";
+        };
+      };
+    </script>
+  </body>
+</html>
